@@ -33,6 +33,35 @@ composer require ichava/flag-icons
 Each filename is the ISO 3166-1 alpha-2 country code (`us`, `gb`, `de`,
 `jp`, ...). Find the full list at <https://github.com/lipis/flag-icons>.
 
+## CDN endpoints
+
+Skip vendoring 530 SVGs and serve from a CDN. The pack registers these
+templates in `config.json` so other Ichava tooling can read them:
+
+```
+https://cdn.jsdelivr.net/npm/flag-icons@7.0.0/flags/{ratio}/{code}.svg
+https://unpkg.com/flag-icons@7.0.0/flags/{ratio}/{code}.svg
+https://raw.githubusercontent.com/lipis/flag-icons/v7.0.0/flags/{ratio}/{code}.svg
+```
+
+- `{ratio}` is `4x3` or `1x1`
+- `{code}` is the ISO 3166-1 alpha-2 country code (`us`, `gb`, `de`, ...)
+
+## Upstream tracking
+
+This pack participates in Ichava's upstream-tracking system. Run
+
+```bash
+php artisan ichava:icons:check-updates --package=ichava/flag-icons
+```
+
+to see whether a newer `lipis/flag-icons` release exists. The check
+hits `registry.npmjs.org` (no rate limit) and caches results for 12
+hours by default.
+
+See `core/documentation/icon-pack-upstream-tracking.md` for the full
+schema + event hooks.
+
 ## Status
 
 **Alpha (v0.1.0).** 265 flags, two aspect ratios. Vendored from a 2022

@@ -52,5 +52,25 @@
     },
     "config": {
         "icon_prefix": "flag"
+    },
+    "upstream": {
+        "source": {
+            "type": "npm",
+            "package": "flag-icons"
+        },
+        "current_version": "7.0.0",
+        "version_check_url": "https://registry.npmjs.org/flag-icons/latest",
+        "license": "MIT",
+        "cdn": {
+            "jsdelivr": "https://cdn.jsdelivr.net/npm/flag-icons@{version}/flags/{ratio}/{code}.svg",
+            "unpkg": "https://unpkg.com/flag-icons@{version}/flags/{ratio}/{code}.svg",
+            "github_raw": "https://raw.githubusercontent.com/lipis/flag-icons/v{version}/flags/{ratio}/{code}.svg"
+        },
+        "update_command": {
+            "type": "github-archive",
+            "_note": "Re-runs the bundled fetch + categorise. Implement when assets need refreshing past the v7.0 snapshot vendored here.",
+            "archive_url": "https://github.com/lipis/flag-icons/archive/refs/tags/v{version}.zip",
+            "source_path": "flag-icons-{version}/flags"
+        }
     }
 }
