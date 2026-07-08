@@ -8,9 +8,9 @@ use Simtabi\Laranail\Ichava\FlagIcons\Constants\IconsConstants;
 use Simtabi\Laranail\Ichava\FlagIcons\View\Components\IconComponent;
 use Simtabi\Laranail\Ichava\Services\IconRegistry;
 use Simtabi\Laranail\Ichava\Support\ServiceProvider;
-use Simtabi\Laranail\PackageTools\Exceptions\InvalidPackage;
-use Simtabi\Laranail\PackageTools\Exceptions\InvalidPath;
-use Simtabi\Laranail\PackageTools\Package;
+use Simtabi\Laranail\Package\Tools\Exceptions\InvalidPackage;
+use Simtabi\Laranail\Package\Tools\Exceptions\InvalidPath;
+use Simtabi\Laranail\Package\Tools\Package;
 
 /**
  * Registers the country-flag pack with the Ichava registry.
