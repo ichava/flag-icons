@@ -16,16 +16,16 @@ composer require ichava/flag-icons
 
 ```blade
 {{-- Default aspect ratio (4x3) --}}
-<x-ichava-flag-icons::icon name="us" />
+<x-ichava-flag-icons:icon name="us" />
 
 {{-- Explicit ratio --}}
-<x-ichava-flag-icons::icon name="1x1/us" />
+<x-ichava-flag-icons:icon name="1x1/us" />
 
 {{-- Through the generic Ichava engine --}}
-<x-ichava::icon name="ichava/flag-icons::4x3/jp" />
+<x-ichava:icon name="ichava/flag-icons:4x3/jp" />
 
 {{-- Helper function --}}
-{{ ichava('ichava/flag-icons::1x1/de', ['class' => 'w-8 h-8 rounded-full']) }}
+{{ ichava('ichava/flag-icons:1x1/de', ['class' => 'w-8 h-8 rounded-full']) }}
 ```
 
 ## Codes
@@ -62,8 +62,16 @@ hours by default.
 See `core/documentation/icon-pack-upstream-tracking.md` for the full
 schema + event hooks.
 
+## Pack-specific docs
+
+Vendor-specific deep dives live in this repo under [`docs/`](docs/). Anything that applies to *every* Ichava icon pack lives in the [main documentation repo](https://github.com/ichava/documentation/blob/main/README.md#icon-packs).
+
+- [Variants](docs/variants.md), the `1x1` and `4x3` ratios and how to address them
+- [Customisation](docs/customization.md), sizing, why `currentColor` does nothing, rounded flags
+- [Attribution](docs/attribution.md), lipis/flag-icons credits and MIT terms
+
 ## Status
 
 **Stable (v1.x).** Two aspect ratios per flag, tracking upstream
-[lipis/flag-icons](https://github.com/lipis/flag-icons) — currently
+[lipis/flag-icons](https://github.com/lipis/flag-icons): currently
 v7.5.0, refreshed automatically by the maintainer-toolkit sync.
