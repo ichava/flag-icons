@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Simtabi\Laranail\Ichava\FlagIcons\Tests\Feature;
 
-use Simtabi\Laranail\Ichava\FlagIcons\Constants\IconsConstants;
-use Simtabi\Laranail\Ichava\FlagIcons\Enums\Variant;
-use Simtabi\Laranail\Ichava\FlagIcons\Providers\IconsServiceProvider;
-use Simtabi\Laranail\Ichava\FlagIcons\Tests\TestCase;
 use Simtabi\Laranail\Ichava\Services\IconRegistry;
+use Simtabi\Laranail\Ichava\FlagIcons\Enums\Variant;
+use Simtabi\Laranail\Ichava\FlagIcons\Tests\TestCase;
+use Simtabi\Laranail\Ichava\FlagIcons\Constants\IconsConstants;
+use Simtabi\Laranail\Ichava\FlagIcons\Providers\IconsServiceProvider;
 
 class IconsTest extends TestCase
 {
@@ -18,7 +18,7 @@ class IconsTest extends TestCase
 
         $this->assertContains(
             IconsServiceProvider::class,
-            $providers
+            $providers,
         );
     }
 
@@ -51,7 +51,7 @@ class IconsTest extends TestCase
 
         $this->assertTrue(
             $registry->isRegistered('ichava/flag-icons'),
-            'IconRegistry should have ichava/flag-icons registered after boot.'
+            'IconRegistry should have ichava/flag-icons registered after boot.',
         );
     }
 }
