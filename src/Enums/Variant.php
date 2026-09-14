@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Simtabi\Laranail\Ichava\FlagIcons\Enums;
 
+use Simtabi\Laranail\Ichava\Traits\HasIconSetVariants;
 use Simtabi\Laranail\Ichava\Contracts\IconSetVariantInterface;
 use Simtabi\Laranail\Ichava\FlagIcons\Constants\IconsConstants;
-use Simtabi\Laranail\Ichava\Traits\HasIconSetVariants;
 
 /**
  * Flag aspect-ratio variant.
@@ -28,12 +28,12 @@ enum Variant: string implements IconSetVariantInterface
         return IconsConstants::getSvgPath($this->value);
     }
 
-    protected static function getDefaultValue(): string
+    private static function getDefaultValue(): string
     {
         return IconsConstants::getDefaultVariant() ?? self::RATIO_4X3->value;
     }
 
-    protected static function getClassPrefix(): string
+    private static function getClassPrefix(): string
     {
         return IconsConstants::getPrefix();
     }

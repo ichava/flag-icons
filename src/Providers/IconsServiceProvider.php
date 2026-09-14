@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Simtabi\Laranail\Ichava\FlagIcons\Providers;
 
-use Simtabi\Laranail\Ichava\FlagIcons\Constants\IconsConstants;
-use Simtabi\Laranail\Ichava\FlagIcons\View\Components\IconComponent;
+use Simtabi\Laranail\Package\Tools\Package;
 use Simtabi\Laranail\Ichava\Services\IconRegistry;
 use Simtabi\Laranail\Ichava\Support\ServiceProvider;
-use Simtabi\Laranail\Package\Tools\Exceptions\InvalidPackage;
 use Simtabi\Laranail\Package\Tools\Exceptions\InvalidPath;
-use Simtabi\Laranail\Package\Tools\Package;
+use Simtabi\Laranail\Package\Tools\Exceptions\InvalidPackage;
+use Simtabi\Laranail\Ichava\FlagIcons\Constants\IconsConstants;
+use Simtabi\Laranail\Ichava\FlagIcons\View\Components\IconComponent;
 
 /**
  * Registers the country-flag pack with the Ichava registry.
