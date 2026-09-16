@@ -15,7 +15,7 @@ use Simtabi\Laranail\Ichava\FlagIcons\View\Components\IconComponent;
 /**
  * Registers the country-flag pack with the Ichava registry.
  *
- * Ships 265 country flags in two aspect ratios (4x3 and 1x1), sourced
+ * Ships 271 country flags in two aspect ratios (4x3 and 1x1), sourced
  * from lipis/flag-icons. The aspect ratio is the variant axis -- pick
  * one at render time.
  */

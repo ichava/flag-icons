@@ -1,6 +1,6 @@
 {
     "name": "ichava/flag-icons",
-    "description": "265 country flag SVGs (4x3 + 1x1 aspect ratios) sourced from lipis/flag-icons. Laravel 13+, built on the Ichava ecosystem.",
+    "description": "271 country flag SVGs (4x3 + 1x1 aspect ratios) sourced from lipis/flag-icons. Laravel 13+, built on the Ichava ecosystem.",
     "type": "library",
     "keywords": [
         "laravel",

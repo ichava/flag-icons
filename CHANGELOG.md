@@ -12,6 +12,7 @@ All notable changes to `ichava/flag-icons` follow [Keep a Changelog](https://kee
 
 - Hardened CI workflows: concurrency groups, job timeouts, problem matchers, docs-only skip paths, test coverage, and tidy composer scripts.
 - Aligned Pest to `^4.6 || ^5.0`, dropped the direct PHPUnit dependency, and applied Pint formatting.
+- Refreshed bundled SVGs from upstream `lipis/flag-icons` 7.5.0: 271 flags in both aspect ratios (542 SVGs total).
 
 ## [0.1.0] - 2026-08-31
 

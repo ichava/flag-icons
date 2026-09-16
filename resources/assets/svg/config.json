@@ -3,7 +3,7 @@
   "package": {
     "name": "ichava/flag-icons",
     "title": "Flag Icons",
-    "description": "265 country flag SVGs sourced from lipis/flag-icons, available in 4x3 and 1x1 aspect ratios. Replaces the flag half of the deprecated simtabi/laflamoji.",
+    "description": "271 country flag SVGs sourced from lipis/flag-icons, available in 4x3 and 1x1 aspect ratios. Replaces the flag half of the deprecated simtabi/laflamoji.",
     "keywords": [
       "flags",
       "country-flags",
@@ -76,7 +76,7 @@
     },
     "update_command": {
       "type": "github-archive",
-      "_note": "Re-runs the bundled fetch + categorise. Implement when assets need refreshing past the v7.0 snapshot vendored here.",
+      "_note": "Re-runs the bundled fetch + categorise. Implement when assets need refreshing past the v7.5.0 snapshot vendored here.",
       "archive_url": "https://github.com/lipis/flag-icons/archive/refs/tags/v{version}.zip",
       "source_path": "flag-icons-{version}/flags"
     }
