@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Simtabi\Laranail\Ichava\FlagIcons\Tests;
 
 use Orchestra\Testbench\TestCase as Orchestra;
-use Simtabi\Laranail\Ichava\FlagIcons\Providers\IconsServiceProvider;
 use Simtabi\Laranail\Ichava\Providers\IchavaServiceProvider;
+use Simtabi\Laranail\Ichava\FlagIcons\Providers\IconsServiceProvider;
 
 abstract class TestCase extends Orchestra
 {
@@ -22,9 +22,9 @@ abstract class TestCase extends Orchestra
     {
         $app['config']->set('database.default', 'testing');
         $app['config']->set('database.connections.testing', [
-            'driver' => 'sqlite',
+            'driver'   => 'sqlite',
             'database' => ':memory:',
-            'prefix' => '',
+            'prefix'   => '',
         ]);
         $app['config']->set('cache.default', 'array');
     }

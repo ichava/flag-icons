@@ -6,7 +6,7 @@ use Simtabi\Laranail\Ichava\FlagIcons\Constants\IconsConstants;
 
 return [
     'set' => [
-        'name' => IconsConstants::getPackageName(),
+        'name'   => IconsConstants::getPackageName(),
         'prefix' => IconsConstants::getPrefix(),
     ],
 
