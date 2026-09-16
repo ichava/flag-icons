@@ -15,17 +15,15 @@ composer require ichava/flag-icons
 ## Usage
 
 ```blade
-{{-- Default aspect ratio (4x3) --}}
-<x-ichava-flag-icons:icon name="us" />
+{{-- Pack component with an explicit ratio --}}
+<x-flag-icons-icon name="us" variant="4x3" />
+<x-flag-icons-icon name="us" variant="1x1" class="w-8 h-8 rounded-full" />
 
-{{-- Explicit ratio --}}
-<x-ichava-flag-icons:icon name="1x1/us" />
-
-{{-- Through the generic Ichava engine --}}
-<x-ichava:icon name="ichava/flag-icons:4x3/jp" />
+{{-- Through the generic engine --}}
+<x-ichava::icon name="ichava/flag-icons::4x3/jp" />
 
 {{-- Helper function --}}
-{{ ichava('ichava/flag-icons:1x1/de', ['class' => 'w-8 h-8 rounded-full']) }}
+{{ ichava('ichava/flag-icons::1x1/de', ['class' => 'w-8 h-8 rounded-full']) }}
 ```
 
 ## Codes

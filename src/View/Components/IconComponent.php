@@ -12,13 +12,13 @@ use Simtabi\Laranail\Ichava\View\Components\IconComponent as BaseIconComponent;
  *
  * Usage:
  *
- *   {{-- Default ratio (4x3) --}}
- *   <x-ichava-flag-icons::icon name="us" />
+ *   {{-- Pack component with an explicit ratio --}}
+ *   <x-flag-icons-icon name="us" variant="4x3" />
  *
  *   {{-- Explicit ratio --}}
- *   <x-ichava-flag-icons::icon name="1x1/us" />
+ *   <x-flag-icons-icon name="us" variant="1x1" />
  *
- *   {{-- Through the generic Ichava engine --}}
+ *   {{-- Through the generic engine --}}
  *   <x-ichava::icon name="ichava/flag-icons::4x3/us" />
  */
 class IconComponent extends BaseIconComponent

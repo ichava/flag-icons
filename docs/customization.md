@@ -13,13 +13,13 @@ The pack ships no `width`/`height` on the root element: `ichava/core` strips the
 when a `viewBox` is present, so the component controls the size. Set it with a class:
 
 ```blade
-<x-ichava:icon name="ichava/flag-icons:4x3/ke" class="w-8" />
+<x-ichava::icon name="ichava/flag-icons::4x3/ke" class="w-8" />
 ```
 
 Give a `1x1` flag a fixed box, since a square crop in a landscape container letterboxes:
 
 ```blade
-<x-ichava:icon name="ichava/flag-icons:1x1/ke" class="w-8 h-8 rounded-full object-cover" />
+<x-ichava::icon name="ichava/flag-icons::1x1/ke" class="w-8 h-8 rounded-full object-cover" />
 ```
 
 ## Colour
@@ -31,7 +31,7 @@ unpainted, which for this pack is nothing.
 To desaturate or tint, use CSS filters rather than fighting the fills:
 
 ```blade
-<x-ichava:icon name="ichava/flag-icons:4x3/ke" class="w-8 grayscale opacity-60" />
+<x-ichava::icon name="ichava/flag-icons::4x3/ke" class="w-8 grayscale opacity-60" />
 ```
 
 ## Rounded and bordered flags
@@ -41,7 +41,7 @@ SVG:
 
 ```blade
 <span class="inline-block overflow-hidden rounded ring-1 ring-black/10">
-    <x-ichava:icon name="ichava/flag-icons:4x3/ke" class="w-8 block" />
+    <x-ichava::icon name="ichava/flag-icons::4x3/ke" class="w-8 block" />
 </span>
 ```
 
