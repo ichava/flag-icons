@@ -1,6 +1,6 @@
 # ichava/flag-icons
 
-265 country-flag SVGs in two aspect ratios (4x3 + 1x1), packaged as an
+271 country-flag SVGs in two aspect ratios (4x3 + 1x1), packaged as an
 Ichava-conformant icon pack. Sources from `lipis/flag-icons`, MIT-licensed.
 
 Replaces the flag half of the deprecated `simtabi/laflamoji`. The emoji
@@ -35,13 +35,13 @@ Each filename is the ISO 3166-1 alpha-2 country code (`us`, `gb`, `de`,
 
 ## CDN endpoints
 
-Skip vendoring 530 SVGs and serve from a CDN. The pack registers these
+Skip vendoring 542 SVGs and serve from a CDN. The pack registers these
 templates in `config.json` so other Ichava tooling can read them:
 
 ```
-https://cdn.jsdelivr.net/npm/flag-icons@7.0.0/flags/{ratio}/{code}.svg
-https://unpkg.com/flag-icons@7.0.0/flags/{ratio}/{code}.svg
-https://raw.githubusercontent.com/lipis/flag-icons/v7.0.0/flags/{ratio}/{code}.svg
+https://cdn.jsdelivr.net/npm/flag-icons@7.5.0/flags/{ratio}/{code}.svg
+https://unpkg.com/flag-icons@7.5.0/flags/{ratio}/{code}.svg
+https://raw.githubusercontent.com/lipis/flag-icons/v7.5.0/flags/{ratio}/{code}.svg
 ```
 
 - `{ratio}` is `4x3` or `1x1`
