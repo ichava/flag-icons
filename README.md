@@ -12,17 +12,30 @@ half (Twemoji, OpenMoji) lives in [`ichava/emoji-sets`](https://github.com/ichav
 composer require ichava/flag-icons
 ```
 
-## Usage
+The provider auto-registers via Laravel package discovery. Seed the icon database:
+
+```bash
+php artisan ichava:database seed --package=ichava/flag-icons
+```
+
+## Quick example
+
+Pack component with an explicit ratio:
 
 ```blade
-{{-- Pack component with an explicit ratio --}}
 <x-flag-icons-icon name="us" variant="4x3" />
 <x-flag-icons-icon name="us" variant="1x1" class="w-8 h-8 rounded-full" />
+```
 
-{{-- Through the generic engine --}}
+Generic engine:
+
+```blade
 <x-ichava::icon name="ichava/flag-icons::4x3/jp" />
+```
 
-{{-- Helper function --}}
+Helper function:
+
+```blade
 {{ ichava('ichava/flag-icons::1x1/de', ['class' => 'w-8 h-8 rounded-full']) }}
 ```
 
