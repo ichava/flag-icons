@@ -7,30 +7,30 @@ use Simtabi\Laranail\Ichava\FlagIcons\Enums\Variant;
 use Simtabi\Laranail\Ichava\FlagIcons\Constants\IconsConstants;
 use Simtabi\Laranail\Ichava\FlagIcons\Providers\IconsServiceProvider;
 
-it('boots the provider without error', function () {
+it(description: 'boots the provider without error', closure: function () {
     $providers = array_keys($this->app->getLoadedProviders());
 
     expect($providers)->toContain(IconsServiceProvider::class);
 });
 
-it('resolves constants from config json', function () {
+it(description: 'resolves constants from config json', closure: function () {
     expect(IconsConstants::getVendorPackage())->toBe('ichava/flag-icons')
         ->and(IconsConstants::getTitle())->toBe('Flag Icons')
         ->and(IconsConstants::getPrefix())->toBe('flag');
 });
 
-it('uses the config prefix in variant enum class helpers', function () {
+it(description: 'uses the config prefix in variant enum class helpers', closure: function () {
     expect(Variant::RATIO_4X3->getClass())->toBe('flag-4x3')
         ->and(Variant::RATIO_1X1->getClass())->toBe('flag-1x1');
 });
 
-it('defaults to the 4x3 variant', function () {
+it(description: 'defaults to the 4x3 variant', closure: function () {
     expect(Variant::default())->toBe(Variant::RATIO_4X3)
         ->and(Variant::RATIO_4X3->isDefault())->toBeTrue()
         ->and(Variant::RATIO_1X1->isDefault())->toBeFalse();
 });
 
-it('picks up the package in the icon registry', function () {
+it(description: 'picks up the package in the icon registry', closure: function () {
     $registry = $this->app->make(IconRegistry::class);
 
     expect($registry->isRegistered('ichava/flag-icons'))->toBeTrue(
