@@ -15,7 +15,7 @@ composer require ichava/flag-icons
 The provider auto-registers via Laravel package discovery. Seed the icon database:
 
 ```bash
-php artisan ichava:database seed --package=ichava/flag-icons
+php artisan ichava::ichava-core.database seed --package=ichava/flag-icons
 ```
 
 ## Quick example
@@ -63,7 +63,7 @@ https://raw.githubusercontent.com/lipis/flag-icons/v7.5.0/flags/{ratio}/{code}.s
 This pack participates in Ichava's upstream-tracking system. Run
 
 ```bash
-php artisan ichava:icons:check-updates --package=ichava/flag-icons
+php artisan ichava::ichava-core.check-updates --package=ichava/flag-icons
 ```
 
 to see whether a newer `lipis/flag-icons` release exists. The check
