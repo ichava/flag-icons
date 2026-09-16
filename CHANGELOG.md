@@ -2,6 +2,17 @@
 
 All notable changes to `ichava/flag-icons` follow [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and [Semantic Versioning](https://semver.org/).
 
+## [0.2.0] - Unreleased
+
+### Added
+
+- PHPStan static analysis (level 0) with `composer analyse` and a code-quality CI workflow.
+
+### Changed
+
+- Hardened CI workflows: concurrency groups, job timeouts, problem matchers, docs-only skip paths, test coverage, and tidy composer scripts.
+- Aligned Pest to `^4.6 || ^5.0`, dropped the direct PHPUnit dependency, and applied Pint formatting.
+
 ## [0.1.0] - 2026-08-31
 
 First open-source release. An icon pack for the Ichava ecosystem: **542 SVGs**, registered with
