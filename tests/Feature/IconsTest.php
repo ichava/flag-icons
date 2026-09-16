@@ -2,56 +2,38 @@
 
 declare(strict_types=1);
 
-namespace Simtabi\Laranail\Ichava\FlagIcons\Tests\Feature;
-
 use Simtabi\Laranail\Ichava\Services\IconRegistry;
 use Simtabi\Laranail\Ichava\FlagIcons\Enums\Variant;
-use Simtabi\Laranail\Ichava\FlagIcons\Tests\TestCase;
 use Simtabi\Laranail\Ichava\FlagIcons\Constants\IconsConstants;
 use Simtabi\Laranail\Ichava\FlagIcons\Providers\IconsServiceProvider;
 
-class IconsTest extends TestCase
-{
-    public function test_provider_boots_without_error(): void
-    {
-        $providers = array_keys($this->app->getLoadedProviders());
+it('boots the provider without error', function () {
+    $providers = array_keys($this->app->getLoadedProviders());
 
-        $this->assertContains(
-            IconsServiceProvider::class,
-            $providers,
-        );
-    }
+    expect($providers)->toContain(IconsServiceProvider::class);
+});
 
-    public function test_constants_resolve_from_config_json(): void
-    {
-        $this->assertSame('ichava/flag-icons', IconsConstants::getVendorPackage());
-        $this->assertSame('Flag Icons', IconsConstants::getTitle());
-        $this->assertSame('flag', IconsConstants::getPrefix());
-    }
+it('resolves constants from config json', function () {
+    expect(IconsConstants::getVendorPackage())->toBe('ichava/flag-icons')
+        ->and(IconsConstants::getTitle())->toBe('Flag Icons')
+        ->and(IconsConstants::getPrefix())->toBe('flag');
+});
 
-    public function test_variant_enum_class_helpers_use_config_prefix(): void
-    {
-        $this->assertSame('flag-4x3', Variant::RATIO_4X3->getClass());
-        $this->assertSame('flag-1x1', Variant::RATIO_1X1->getClass());
-    }
+it('uses the config prefix in variant enum class helpers', function () {
+    expect(Variant::RATIO_4X3->getClass())->toBe('flag-4x3')
+        ->and(Variant::RATIO_1X1->getClass())->toBe('flag-1x1');
+});
 
-    public function test_default_variant_is_4x3(): void
-    {
-        $default = Variant::default();
+it('defaults to the 4x3 variant', function () {
+    expect(Variant::default())->toBe(Variant::RATIO_4X3)
+        ->and(Variant::RATIO_4X3->isDefault())->toBeTrue()
+        ->and(Variant::RATIO_1X1->isDefault())->toBeFalse();
+});
 
-        $this->assertSame(Variant::RATIO_4X3, $default);
-        $this->assertTrue(Variant::RATIO_4X3->isDefault());
-        $this->assertFalse(Variant::RATIO_1X1->isDefault());
-    }
+it('picks up the package in the icon registry', function () {
+    $registry = $this->app->make(IconRegistry::class);
 
-    public function test_icon_registry_picks_up_the_package(): void
-    {
-        /** @var IconRegistry $registry */
-        $registry = $this->app->make(IconRegistry::class);
-
-        $this->assertTrue(
-            $registry->isRegistered('ichava/flag-icons'),
-            'IconRegistry should have ichava/flag-icons registered after boot.',
-        );
-    }
-}
+    expect($registry->isRegistered('ichava/flag-icons'))->toBeTrue(
+        'IconRegistry should have ichava/flag-icons registered after boot.',
+    );
+});

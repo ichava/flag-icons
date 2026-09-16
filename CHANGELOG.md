@@ -14,6 +14,10 @@ All notable changes to `ichava/flag-icons` follow [Keep a Changelog](https://kee
 - Aligned Pest to `^4.6 || ^5.0`, dropped the direct PHPUnit dependency, and applied Pint formatting.
 - Refreshed bundled SVGs from upstream `lipis/flag-icons` 7.5.0: 271 flags in both aspect ratios (542 SVGs total).
 
+### Fixed
+
+- Corrected every documented icon path to the resolving form: the `::` separator with an explicit ratio prefix (e.g. `ichava/flag-icons::4x3/ke`). Single-colon and ratio-less examples threw at render time. The pack component is `<x-flag-icons-icon>` with a `variant` attribute.
+
 ## [0.1.0] - 2026-08-31
 
 First open-source release. An icon pack for the Ichava ecosystem: **542 SVGs**, registered with
