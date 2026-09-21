@@ -70,8 +70,8 @@ to see whether a newer `lipis/flag-icons` release exists. The check
 hits `registry.npmjs.org` (no rate limit) and caches results for 12
 hours by default.
 
-See `core/documentation/icon-pack-upstream-tracking.md` for the full
-schema + event hooks.
+See [`maintainer-toolkit/docs/upstream-tracking.md`](https://opensource.simtabi.com/documentation/ichava/maintainer-toolkit/upstream-tracking)
+for the full schema + event hooks.
 
 ## <a name="documentation"></a>Documentation
 
