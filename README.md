@@ -73,7 +73,7 @@ hours by default.
 See `core/documentation/icon-pack-upstream-tracking.md` for the full
 schema + event hooks.
 
-## Pack-specific docs
+## <a name="documentation"></a>Documentation
 
 Vendor-specific deep dives live in this repo under [`docs/`](docs/). Anything that applies to *every* Ichava icon pack lives in the [main documentation repo](https://github.com/ichava/documentation/blob/main/README.md#icon-packs).
 

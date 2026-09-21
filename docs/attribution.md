@@ -36,4 +36,4 @@ silently diverge from every refresh.
 
 ---
 
-[← Docs index](../README.md#pack-specific-docs)
+[← Docs index](../README.md#documentation)
