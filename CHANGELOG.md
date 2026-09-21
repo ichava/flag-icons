@@ -2,6 +2,20 @@
 
 All notable changes to `ichava/icon-sets-flag` follow [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Fixed
+
+- **A README reference named a path that has never existed.** It read
+  `core/documentation/icon-pack-upstream-tracking.md` as bare prose, with no link at all —
+  neither the old layout nor the new one has ever had a `core/documentation/` directory. It is
+  now a link to the page that really holds that schema, matching the other packs.
+
+  **No link checker sees this class.** The label is a code span, not a target, so the link
+  resolves and the text next to it is wrong — `lychee` and every `](...)` sweep pass it. Found
+  by grepping for `` `…documentation/….md` `` rather than for links, after the estate-wide link
+  scan came back at zero.
+
 ## [0.3.0] - 2026-09-21
 
 ### Changed
