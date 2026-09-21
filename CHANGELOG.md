@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to `ichava/flag-icons` follow [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and [Semantic Versioning](https://semver.org/).
+All notable changes to `ichava/icon-sets-flag` follow [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and [Semantic Versioning](https://semver.org/).
 
 ## [0.3.0] - 2026-09-21
 
@@ -15,8 +15,8 @@ All notable changes to `ichava/flag-icons` follow [Keep a Changelog](https://kee
 
   | Surface | Was | Now |
   |---|---|---|
-  | Composer package | `ichava/flag-icons` | `ichava/icon-sets-flag` |
-  | PHP namespace | `Simtabi\Laranail\Ichava\FlagIcons` | `Simtabi\Laranail\Ichava\IconSetsFlag` |
+  | Composer package | `ichava/icon-sets-flag` | `ichava/icon-sets-flag` |
+  | PHP namespace | `Simtabi\Laranail\Ichava\IconSetsFlag` | `Simtabi\Laranail\Ichava\IconSetsFlag` |
   | Config file and key | `config/flag-icons.php` | `config/icon-sets-flag.php` |
   | Blade component tag | `<x-flag-icons-icon>` | `<x-icon-sets-flag-icon>` |
 
@@ -188,7 +188,7 @@ All notable changes to `ichava/flag-icons` follow [Keep a Changelog](https://kee
 
 ### Fixed
 
-- Corrected every documented icon path to the resolving form: the `::` separator with an explicit ratio prefix (e.g. `ichava/flag-icons::4x3/ke`). Single-colon and ratio-less examples threw at render time. The pack component is `<x-flag-icons-icon>` with a `variant` attribute.
+- Corrected every documented icon path to the resolving form: the `::` separator with an explicit ratio prefix (e.g. `ichava/icon-sets-flag::4x3/ke`). Single-colon and ratio-less examples threw at render time. The pack component is `<x-flag-icons-icon>` with a `variant` attribute.
 
 ## [0.1.0] - 2026-08-31
 
