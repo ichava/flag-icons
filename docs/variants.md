@@ -36,4 +36,4 @@ and non-sovereign flags use the alpha-2 code their upstream assigns; see
 
 ---
 
-[← Docs index](../README.md#pack-specific-docs)
+[← Docs index](../README.md#documentation)
