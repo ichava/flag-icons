@@ -1,88 +1,45 @@
 # ichava/icon-sets-flag
 
-271 country-flag SVGs in two aspect ratios (4x3 + 1x1), packaged as an
-Ichava-conformant icon pack. Sources from `lipis/flag-icons`, MIT-licensed.
+[![Tests](https://github.com/ichava/icon-sets-flag/actions/workflows/tests.yml/badge.svg)](https://github.com/ichava/icon-sets-flag/actions/workflows/tests.yml)
+[![Code Quality](https://github.com/ichava/icon-sets-flag/actions/workflows/code-quality.yml/badge.svg)](https://github.com/ichava/icon-sets-flag/actions/workflows/code-quality.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-Replaces the flag half of the deprecated `simtabi/laflamoji`. The emoji
-half (Twemoji, OpenMoji) lives in [`ichava/icon-sets-emoji`](https://github.com/ichava/icon-sets-emoji).
+> Country flag icons for the Ichava Laravel icon ecosystem — 542 SVGs in `4x3` and `1x1` ratios, vendored from `lipis/flag-icons`.
+
+This package is not published to Packagist, so there is no registry-version badge to show. Requires [`ichava/core`](https://opensource.simtabi.com/documentation/ichava/core/); targets PHP `^8.4.1 || ^8.5` on Laravel `^13`.
 
 ## Install
 
 ```bash
 composer require ichava/icon-sets-flag
-```
-
-The provider auto-registers via Laravel package discovery. Seed the icon database:
-
-```bash
 php artisan ichava::ichava-core.database seed --package=ichava/icon-sets-flag
 ```
 
-## Quick example
-
-Pack component with an explicit ratio:
-
-```blade
-<x-icon-sets-flag-icon name="us" variant="4x3" />
-<x-icon-sets-flag-icon name="us" variant="1x1" class="w-8 h-8 rounded-full" />
-```
-
-Generic engine:
-
-```blade
-<x-ichava::icon name="ichava/icon-sets-flag::4x3/jp" />
-```
-
-Helper function:
-
-```blade
-{{ ichava('ichava/icon-sets-flag::1x1/de', ['class' => 'w-8 h-8 rounded-full']) }}
-```
-
-## Codes
-
-Each filename is the ISO 3166-1 alpha-2 country code (`us`, `gb`, `de`,
-`jp`, ...). Find the full list at <https://github.com/lipis/flag-icons>.
-
-## CDN endpoints
-
-Skip vendoring 542 SVGs and serve from a CDN. The pack registers these
-templates in `config.json` so other Ichava tooling can read them:
-
-```
-https://cdn.jsdelivr.net/npm/flag-icons@7.5.0/flags/{ratio}/{code}.svg
-https://unpkg.com/flag-icons@7.5.0/flags/{ratio}/{code}.svg
-https://raw.githubusercontent.com/lipis/flag-icons/v7.5.0/flags/{ratio}/{code}.svg
-```
-
-- `{ratio}` is `4x3` or `1x1`
-- `{code}` is the ISO 3166-1 alpha-2 country code (`us`, `gb`, `de`, ...)
-
-## Upstream tracking
-
-This pack participates in Ichava's upstream-tracking system. Run
-
-```bash
-php artisan ichava::ichava-core.check-updates --package=ichava/icon-sets-flag
-```
-
-to see whether a newer `lipis/flag-icons` release exists. The check
-hits `registry.npmjs.org` (no rate limit) and caches results for 12
-hours by default.
-
-See [`maintainer-toolkit/docs/upstream-tracking.md`](https://opensource.simtabi.com/documentation/ichava/maintainer-toolkit/upstream-tracking)
-for the full schema + event hooks.
+The seed is not optional — until it runs the registry holds no rows for this pack and every lookup returns nothing. See core's [installation guide](https://opensource.simtabi.com/documentation/ichava/core/installation).
 
 ## <a name="documentation"></a>Documentation
 
-Vendor-specific deep dives live in this repo under [`docs/`](docs/). Anything that applies to *every* Ichava icon pack lives in the [main documentation repo](https://github.com/ichava/documentation/blob/main/README.md#icon-packs).
+Full documentation is at **[opensource.simtabi.com/documentation/ichava/icon-sets-flag](https://opensource.simtabi.com/documentation/ichava/icon-sets-flag/)**.
 
-- [Variants](docs/variants.md), the `1x1` and `4x3` ratios and how to address them
-- [Customisation](docs/customization.md), sizing, why `currentColor` does nothing, rounded flags
-- [Attribution](docs/attribution.md), lipis/flag-icons credits and MIT terms
+### This pack
 
-## Status
+- [Variants](docs/variants.md) — the `1x1` and `4x3` ratios, and the ISO 3166-1 codes files are named by
+- [Customisation](docs/customization.md) — sizing, why `currentColor` does nothing here, rounded and bordered flags
+- [Attribution](docs/attribution.md) — upstream project, licence terms, and where the vendored version is recorded
 
-**Stable (v1.x).** Two aspect ratios per flag, tracking upstream
-[lipis/flag-icons](https://github.com/lipis/flag-icons): currently
-v7.5.0, refreshed automatically by the maintainer-toolkit sync.
+### Shared across every pack
+
+- [Use an icon pack](https://opensource.simtabi.com/documentation/ichava/core/recipes/use-an-icon-pack) — addressing icons, in Blade and in PHP
+- [Seed pack icons](https://opensource.simtabi.com/documentation/ichava/core/recipes/seed-pack-icons) — the seeding pipeline and its options
+- [Check pack updates](https://opensource.simtabi.com/documentation/ichava/core/recipes/check-pack-updates) — the update checker and what its statuses mean
+- [Serve icons from a CDN](https://opensource.simtabi.com/documentation/ichava/core/recipes/serve-icons-from-a-cdn) — reading this pack's CDN templates out of `config.json`
+
+Its upstream is `lipis/flag-icons`; run core's [check pack updates](https://opensource.simtabi.com/documentation/ichava/core/recipes/check-pack-updates) recipe to see whether a newer release exists.
+
+## Contributing & security
+
+See [CONTRIBUTING.md](CONTRIBUTING.md). Report vulnerabilities privately through [SECURITY.md](SECURITY.md) — never in a public issue.
+
+## License
+
+MIT. © Simtabi LLC. See [LICENSE](LICENSE).
