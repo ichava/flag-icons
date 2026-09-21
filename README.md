@@ -4,7 +4,7 @@
 Ichava-conformant icon pack. Sources from `lipis/flag-icons`, MIT-licensed.
 
 Replaces the flag half of the deprecated `simtabi/laflamoji`. The emoji
-half (Twemoji, OpenMoji) lives in [`ichava/emoji-sets`](https://github.com/ichava/emoji-sets).
+half (Twemoji, OpenMoji) lives in [`ichava/icon-sets-emoji`](https://github.com/ichava/icon-sets-emoji).
 
 ## Install
 
