@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Simtabi\Laranail\Ichava\FlagIcons\Enums\Variant;
+use Simtabi\Laranail\Ichava\IconSetsFlag\Enums\Variant;
 
 /**
  * Pins the canonical `resources/` shape shared by every Ichava icon pack.
@@ -70,5 +70,5 @@ it(description: 'declares itself as this package in config.json', closure: funct
         flags: JSON_THROW_ON_ERROR,
     );
 
-    expect($config['package']['name'])->toBe('ichava/flag-icons');
+    expect($config['package']['name'])->toBe('ichava/icon-sets-flag');
 });

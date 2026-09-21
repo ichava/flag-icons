@@ -14,7 +14,7 @@ declare(strict_types=1);
 | while nothing was reading it. A non-English locale may add them to
 | override; `en` must not.
 |
-| Variant keys match Simtabi\Laranail\Ichava\FlagIcons\Enums\Variant.
+| Variant keys match Simtabi\Laranail\Ichava\IconSetsFlag\Enums\Variant.
 |
 */
 

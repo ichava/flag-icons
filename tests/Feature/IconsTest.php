@@ -3,9 +3,9 @@
 declare(strict_types=1);
 
 use Simtabi\Laranail\Ichava\Services\IconRegistry;
-use Simtabi\Laranail\Ichava\FlagIcons\Enums\Variant;
-use Simtabi\Laranail\Ichava\FlagIcons\Constants\IconsConstants;
-use Simtabi\Laranail\Ichava\FlagIcons\Providers\IconsServiceProvider;
+use Simtabi\Laranail\Ichava\IconSetsFlag\Enums\Variant;
+use Simtabi\Laranail\Ichava\IconSetsFlag\Constants\IconsConstants;
+use Simtabi\Laranail\Ichava\IconSetsFlag\Providers\IconsServiceProvider;
 
 it(description: 'boots the provider without error', closure: function () {
     $providers = array_keys($this->app->getLoadedProviders());
@@ -14,7 +14,7 @@ it(description: 'boots the provider without error', closure: function () {
 });
 
 it(description: 'resolves constants from config json', closure: function () {
-    expect(IconsConstants::getVendorPackage())->toBe('ichava/flag-icons')
+    expect(IconsConstants::getVendorPackage())->toBe('ichava/icon-sets-flag')
         ->and(IconsConstants::getTitle())->toBe('Flag Icons')
         ->and(IconsConstants::getPrefix())->toBe('flag');
 });
@@ -33,7 +33,7 @@ it(description: 'defaults to the 4x3 variant', closure: function () {
 it(description: 'picks up the package in the icon registry', closure: function () {
     $registry = $this->app->make(IconRegistry::class);
 
-    expect($registry->isRegistered('ichava/flag-icons'))->toBeTrue(
-        'IconRegistry should have ichava/flag-icons registered after boot.',
+    expect($registry->isRegistered('ichava/icon-sets-flag'))->toBeTrue(
+        'IconRegistry should have ichava/icon-sets-flag registered after boot.',
     );
 });

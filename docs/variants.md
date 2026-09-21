@@ -17,11 +17,11 @@ Counted with `ls resources/assets/svg/files/<variant>/*.svg | wc -l`.
 ## Addressing a flag
 
 ```blade
-<x-ichava::icon name="ichava/flag-icons::4x3/ke" class="w-8" />
-<x-ichava::icon name="ichava/flag-icons::1x1/ke" class="w-8 rounded-full" />
+<x-ichava::icon name="ichava/icon-sets-flag::4x3/ke" class="w-8" />
+<x-ichava::icon name="ichava/icon-sets-flag::1x1/ke" class="w-8 rounded-full" />
 ```
 
-The dot form resolves identically: `ichava/flag-icons::4x3.ke`.
+The dot form resolves identically: `ichava/icon-sets-flag::4x3.ke`.
 
 ## There is no default variant
 

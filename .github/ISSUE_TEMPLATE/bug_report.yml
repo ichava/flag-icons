@@ -1,5 +1,5 @@
 name: Bug report
-description: Something in ichava/flag-icons misbehaves
+description: Something in ichava/icon-sets-flag misbehaves
 labels: [bug]
 body:
   - type: textarea

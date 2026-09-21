@@ -1,6 +1,34 @@
 # Changelog
 
-All notable changes to `ichava/flag-icons` follow [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and [Semantic Versioning](https://semver.org/).
+All notable changes to `ichava/icon-sets-flag` follow [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and [Semantic Versioning](https://semver.org/).
+
+## [0.3.0] - 2026-09-21
+
+### Changed
+
+- **Renamed to `ichava/icon-sets-flag`.** The composer package, the GitHub repository and the
+  local directory now all read `icon-sets-flag`, restoring the one-name rule the ecosystem
+  relies on.
+
+  **This is a breaking change, and it is why the minor moves.** A `0.x` caret pins the minor,
+  so `^0.2` will not resolve to `0.3.0` — consumers move deliberately rather than by accident.
+
+  | Surface | Was | Now |
+  |---|---|---|
+  | Composer package | `ichava/icon-sets-flag` | `ichava/icon-sets-flag` |
+  | PHP namespace | `Simtabi\Laranail\Ichava\IconSetsFlag` | `Simtabi\Laranail\Ichava\IconSetsFlag` |
+  | Config file and key | `config/flag-icons.php` | `config/icon-sets-flag.php` |
+  | Blade component tag | `<x-flag-icons-icon>` | `<x-icon-sets-flag-icon>` |
+
+  The config **filename** must match the package short name or the key silently doubles and
+  every `config()` read returns `null` — the `V39` defect that once left an entire shipped
+  config inert.
+
+  **Upstream references are deliberately untouched.** `lipis/flag-icons` is the source project,
+  and `registry.npmjs.org/flag-icons` with the jsDelivr and unpkg templates is its npm package.
+  The token names both our package and theirs; a blanket rename would have aimed the update
+  checker at a package that does not exist and 404'd every CDN link — failing in a host app
+  rather than in CI.
 
 ## [0.2.6] - 2026-09-21
 
@@ -160,7 +188,7 @@ All notable changes to `ichava/flag-icons` follow [Keep a Changelog](https://kee
 
 ### Fixed
 
-- Corrected every documented icon path to the resolving form: the `::` separator with an explicit ratio prefix (e.g. `ichava/flag-icons::4x3/ke`). Single-colon and ratio-less examples threw at render time. The pack component is `<x-flag-icons-icon>` with a `variant` attribute.
+- Corrected every documented icon path to the resolving form: the `::` separator with an explicit ratio prefix (e.g. `ichava/icon-sets-flag::4x3/ke`). Single-colon and ratio-less examples threw at render time. The pack component is `<x-flag-icons-icon>` with a `variant` attribute.
 
 ## [0.1.0] - 2026-08-31
 
