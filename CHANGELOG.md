@@ -4,6 +4,31 @@ All notable changes to `ichava/flag-icons` follow [Keep a Changelog](https://kee
 
 ## [Unreleased]
 
+### Added
+
+- **`resources/lang/` and `resources/views/`, bringing this pack to the canonical
+  resource shape.** It shipped neither, while three of the five packs did -- plain
+  drift rather than a deliberate difference, since this pack has the same
+  single-`Variant` shape as `tabler-icons`, which has both.
+
+  `lang/en/icons.php` carries the variant labels, their descriptions, and the
+  command and info strings. It deliberately **omits `name` and `description`**:
+  `IconRegistry::fromDirectory()` reads those from
+  `resources/assets/svg/config.json`, which is canonical, and the packs that kept
+  a second copy had already drifted apart from it unnoticed.
+
+  `views/components/` is an empty placeholder, kept for consistency across the
+  family. Nothing registers it -- the component path renders SVG directly rather
+  than through a Blade template.
+
+  `tests/Unit/ResourceShapeTest.php` pins the shape. The variant assertion
+  compares the lang keys against the `Variant` enum, which is what makes a file
+  copied from another pack fail rather than ship silently.
+
+  > Nothing loads these translations yet. No pack calls `hasTranslations()`, so
+  > `laranail/package-tools` never registers the namespace. Wiring that up, with a
+  > consumer, is a separate change.
+
 ### Fixed
 
 - **A failed SBOM download no longer takes the whole release down.** `release.yml` generates the
