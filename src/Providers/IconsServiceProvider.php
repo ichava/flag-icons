@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Simtabi\Laranail\Ichava\FlagIcons\Providers;
+namespace Simtabi\Laranail\Ichava\IconSetsFlag\Providers;
 
 use Simtabi\Laranail\Package\Tools\Package;
 use Simtabi\Laranail\Ichava\Services\IconRegistry;
 use Simtabi\Laranail\Ichava\Support\ServiceProvider;
 use Simtabi\Laranail\Package\Tools\Exceptions\InvalidPath;
 use Simtabi\Laranail\Package\Tools\Exceptions\InvalidPackage;
-use Simtabi\Laranail\Ichava\FlagIcons\Constants\IconsConstants;
-use Simtabi\Laranail\Ichava\FlagIcons\View\Components\IconComponent;
+use Simtabi\Laranail\Ichava\IconSetsFlag\Constants\IconsConstants;
+use Simtabi\Laranail\Ichava\IconSetsFlag\View\Components\IconComponent;
 
 /**
  * Registers the country-flag pack with the Ichava registry.
@@ -30,12 +30,12 @@ class IconsServiceProvider extends ServiceProvider
         $package
             ->setName(IconsConstants::getVendorPackage())
             ->setPathFrom(source: $this, levelsUp: 2)
-            ->hasConfigFile('flag-icons');
+            ->hasConfigFile('icon-sets-flag');
     }
 
     public function bootingPackage(): void
     {
-        $this->loadBladeComponent(componentClass: IconComponent::class, packageName: 'flag-icons');
+        $this->loadBladeComponent(componentClass: IconComponent::class, packageName: 'icon-sets-flag');
 
         $this->app->make(IconRegistry::class)->fromDirectory(
             $this->package->basePath('resources/assets/svg'),

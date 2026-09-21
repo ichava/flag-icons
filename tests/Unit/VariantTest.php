@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Simtabi\Laranail\Ichava\FlagIcons\Enums\Variant;
+use Simtabi\Laranail\Ichava\IconSetsFlag\Enums\Variant;
 
 /**
  * Pure-enum behaviour tests. Anything that touches config.json (default(),

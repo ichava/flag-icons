@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Simtabi\Laranail\Ichava\FlagIcons\View\Components;
+namespace Simtabi\Laranail\Ichava\IconSetsFlag\View\Components;
 
-use Simtabi\Laranail\Ichava\FlagIcons\Constants\IconsConstants;
+use Simtabi\Laranail\Ichava\IconSetsFlag\Constants\IconsConstants;
 use Simtabi\Laranail\Ichava\View\Components\IconComponent as BaseIconComponent;
 
 /**
@@ -19,7 +19,7 @@ use Simtabi\Laranail\Ichava\View\Components\IconComponent as BaseIconComponent;
  *   <x-flag-icons-icon name="us" variant="1x1" />
  *
  *   {{-- Through the generic engine --}}
- *   <x-ichava::icon name="ichava/flag-icons::4x3/us" />
+ *   <x-ichava::icon name="ichava/icon-sets-flag::4x3/us" />
  */
 class IconComponent extends BaseIconComponent
 {

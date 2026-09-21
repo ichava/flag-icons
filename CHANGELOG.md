@@ -2,6 +2,33 @@
 
 All notable changes to `ichava/flag-icons` follow [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and [Semantic Versioning](https://semver.org/).
 
+## [0.3.0] - 2026-09-21
+
+### Changed
+
+- **Renamed to `ichava/icon-sets-flag`.** The composer package, the GitHub repository and the
+  local directory now all read `icon-sets-flag`, restoring the one-name rule the ecosystem
+  relies on.
+
+  **This is a breaking change, and it is why the minor moves.** A `0.x` caret pins the minor,
+  so `^0.2` will not resolve to `0.3.0` — consumers move deliberately rather than by accident.
+
+  | Surface | Was | Now |
+  |---|---|---|
+  | Composer package | `ichava/flag-icons` | `ichava/icon-sets-flag` |
+  | PHP namespace | `Simtabi\Laranail\Ichava\FlagIcons` | `Simtabi\Laranail\Ichava\IconSetsFlag` |
+  | Config file and key | `config/flag-icons.php` | `config/icon-sets-flag.php` |
+
+  The config **filename** must match the package short name or the key silently doubles and
+  every `config()` read returns `null` — the `V39` defect that once left an entire shipped
+  config inert.
+
+  **Upstream references are deliberately untouched.** `lipis/flag-icons` is the source project,
+  and `registry.npmjs.org/flag-icons` with the jsDelivr and unpkg templates is its npm package.
+  The token names both our package and theirs; a blanket rename would have aimed the update
+  checker at a package that does not exist and 404'd every CDN link — failing in a host app
+  rather than in CI.
+
 ## [0.2.6] - 2026-09-21
 
 ### Added

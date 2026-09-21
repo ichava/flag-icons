@@ -1,5 +1,5 @@
 name: Feature request
-description: Propose an improvement to ichava/flag-icons
+description: Propose an improvement to ichava/icon-sets-flag
 labels: [enhancement]
 body:
   - type: textarea

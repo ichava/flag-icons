@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Simtabi\Laranail\Ichava\FlagIcons\Enums;
+namespace Simtabi\Laranail\Ichava\IconSetsFlag\Enums;
 
 use Simtabi\Laranail\Ichava\Traits\HasIconSetVariants;
 use Simtabi\Laranail\Ichava\Contracts\IconSetVariantInterface;
-use Simtabi\Laranail\Ichava\FlagIcons\Constants\IconsConstants;
+use Simtabi\Laranail\Ichava\IconSetsFlag\Constants\IconsConstants;
 
 /**
  * Flag aspect-ratio variant.

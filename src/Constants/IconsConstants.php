@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Simtabi\Laranail\Ichava\FlagIcons\Constants;
+namespace Simtabi\Laranail\Ichava\IconSetsFlag\Constants;
 
 use Simtabi\Laranail\Ichava\Support\PathResolver;
 use Simtabi\Laranail\Ichava\Constants\JsonConfigConstants;

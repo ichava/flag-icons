@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Simtabi\Laranail\Ichava\FlagIcons\Constants\IconsConstants;
+use Simtabi\Laranail\Ichava\IconSetsFlag\Constants\IconsConstants;
 
 return [
     'set' => [

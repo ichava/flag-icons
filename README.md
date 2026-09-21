@@ -1,4 +1,4 @@
-# ichava/flag-icons
+# ichava/icon-sets-flag
 
 271 country-flag SVGs in two aspect ratios (4x3 + 1x1), packaged as an
 Ichava-conformant icon pack. Sources from `lipis/flag-icons`, MIT-licensed.
@@ -9,13 +9,13 @@ half (Twemoji, OpenMoji) lives in [`ichava/emoji-sets`](https://github.com/ichav
 ## Install
 
 ```bash
-composer require ichava/flag-icons
+composer require ichava/icon-sets-flag
 ```
 
 The provider auto-registers via Laravel package discovery. Seed the icon database:
 
 ```bash
-php artisan ichava::ichava-core.database seed --package=ichava/flag-icons
+php artisan ichava::ichava-core.database seed --package=ichava/icon-sets-flag
 ```
 
 ## Quick example
@@ -30,13 +30,13 @@ Pack component with an explicit ratio:
 Generic engine:
 
 ```blade
-<x-ichava::icon name="ichava/flag-icons::4x3/jp" />
+<x-ichava::icon name="ichava/icon-sets-flag::4x3/jp" />
 ```
 
 Helper function:
 
 ```blade
-{{ ichava('ichava/flag-icons::1x1/de', ['class' => 'w-8 h-8 rounded-full']) }}
+{{ ichava('ichava/icon-sets-flag::1x1/de', ['class' => 'w-8 h-8 rounded-full']) }}
 ```
 
 ## Codes
@@ -63,7 +63,7 @@ https://raw.githubusercontent.com/lipis/flag-icons/v7.5.0/flags/{ratio}/{code}.s
 This pack participates in Ichava's upstream-tracking system. Run
 
 ```bash
-php artisan ichava::ichava-core.check-updates --package=ichava/flag-icons
+php artisan ichava::ichava-core.check-updates --package=ichava/icon-sets-flag
 ```
 
 to see whether a newer `lipis/flag-icons` release exists. The check

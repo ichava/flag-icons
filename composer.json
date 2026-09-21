@@ -1,5 +1,5 @@
 {
-    "name": "ichava/flag-icons",
+    "name": "ichava/icon-sets-flag",
     "description": "271 country flag SVGs (4x3 + 1x1 aspect ratios) sourced from lipis/flag-icons. Laravel 13+, built on the Ichava ecosystem.",
     "type": "library",
     "keywords": [
@@ -10,7 +10,7 @@
         "svg",
         "ichava"
     ],
-    "homepage": "https://opensource.simtabi.com/products/ichava/flag-icons",
+    "homepage": "https://opensource.simtabi.com/products/ichava/icon-sets-flag",
     "license": "MIT",
     "authors": [
         {
@@ -52,18 +52,18 @@
     },
     "autoload": {
         "psr-4": {
-            "Simtabi\\Laranail\\Ichava\\FlagIcons\\": "src/"
+            "Simtabi\\Laranail\\Ichava\\IconSetsFlag\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Simtabi\\Laranail\\Ichava\\FlagIcons\\Tests\\": "tests/"
+            "Simtabi\\Laranail\\Ichava\\IconSetsFlag\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Simtabi\\Laranail\\Ichava\\FlagIcons\\Providers\\IconsServiceProvider"
+                "Simtabi\\Laranail\\Ichava\\IconSetsFlag\\Providers\\IconsServiceProvider"
             ]
         },
         "branch-alias": {
@@ -87,9 +87,9 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "support": {
-        "source": "https://github.com/ichava/flag-icons",
-        "issues": "https://github.com/ichava/flag-icons/issues",
-        "security": "https://github.com/ichava/flag-icons/security/policy",
-        "docs": "https://opensource.simtabi.com/documentation/ichava/flag-icons/"
+        "source": "https://github.com/ichava/icon-sets-flag",
+        "issues": "https://github.com/ichava/icon-sets-flag/issues",
+        "security": "https://github.com/ichava/icon-sets-flag/security/policy",
+        "docs": "https://opensource.simtabi.com/documentation/ichava/icon-sets-flag/"
     }
 }

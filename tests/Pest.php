@@ -2,6 +2,6 @@
 
 declare(strict_types=1);
 
-use Simtabi\Laranail\Ichava\FlagIcons\Tests\TestCase;
+use Simtabi\Laranail\Ichava\IconSetsFlag\Tests\TestCase;
 
 pest()->extend(TestCase::class)->in('Feature');
