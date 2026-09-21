@@ -23,8 +23,8 @@ php artisan ichava::ichava-core.database seed --package=ichava/icon-sets-flag
 Pack component with an explicit ratio:
 
 ```blade
-<x-flag-icons-icon name="us" variant="4x3" />
-<x-flag-icons-icon name="us" variant="1x1" class="w-8 h-8 rounded-full" />
+<x-icon-sets-flag-icon name="us" variant="4x3" />
+<x-icon-sets-flag-icon name="us" variant="1x1" class="w-8 h-8 rounded-full" />
 ```
 
 Generic engine:

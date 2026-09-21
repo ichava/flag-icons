@@ -18,6 +18,7 @@ All notable changes to `ichava/flag-icons` follow [Keep a Changelog](https://kee
   | Composer package | `ichava/flag-icons` | `ichava/icon-sets-flag` |
   | PHP namespace | `Simtabi\Laranail\Ichava\FlagIcons` | `Simtabi\Laranail\Ichava\IconSetsFlag` |
   | Config file and key | `config/flag-icons.php` | `config/icon-sets-flag.php` |
+  | Blade component tag | `<x-flag-icons-icon>` | `<x-icon-sets-flag-icon>` |
 
   The config **filename** must match the package short name or the key silently doubles and
   every `config()` read returns `null` — the `V39` defect that once left an entire shipped

@@ -33,7 +33,7 @@ it(description: 'rejects a bare code without a ratio', closure: function () {
 });
 
 it(description: 'renders the pack component with a variant attribute', closure: function () {
-    $html = (string) $this->blade('<x-flag-icons-icon name="us" variant="4x3" />');
+    $html = (string) $this->blade('<x-icon-sets-flag-icon name="us" variant="4x3" />');
 
     expect($html)->toContain('<svg');
 });
