@@ -94,3 +94,35 @@ it(description: 'points metadata.repository at this package, not its upstream', 
     // `metadata.homepage` points at the upstream's own site where one exists.
     expect($config['metadata']['repository'])->toBe('https://github.com/ichava/icon-sets-flag');
 });
+
+it(description: 'points metadata.homepage at the upstream project, never at this package', closure: function () {
+    $config = json_decode(
+        (string) file_get_contents(flag_resources() . '/assets/svg/config.json'),
+        true,
+        flags: JSON_THROW_ON_ERROR,
+    );
+
+    // Settled 2026-09-22, enforcing what the repository guard above already
+    // states: `metadata.homepage` is the UPSTREAM project's own site.
+    //
+    // Three fields were each claiming to be "the package's URL" and only one
+    // of them can be: `composer.json`'s `homepage` is this package's landing
+    // page, `metadata.repository` is this package's repository, and
+    // `upstream.*` carries the machine endpoints -- source, version_check_url,
+    // CDN templates, archive_url. The one fact none of them records is where a
+    // human goes to see the icon set itself, which is what this field is for.
+    //
+    // It had drifted to this package's own repository here and in `emoji`, so
+    // the browser API shipped `homepage` and `repository` as two identical
+    // links under different names. Nothing rendered it, which is why it
+    // survived: `IconRegistry` reads it into the pack descriptor and
+    // `publicMetadata()` allows it through, and no frontend consumes it.
+    $homepage = $config['metadata']['homepage'] ?? null;
+
+    expect($homepage)->toBe('https://github.com/lipis/flag-icons')
+        ->and($homepage)->not->toBe($config['metadata']['repository']);
+
+    // The general rule, asserted separately so it survives an upstream rename:
+    // whatever this holds, it is never one of OUR URLs.
+    expect($homepage)->not->toContain('github.com/ichava/');
+});
