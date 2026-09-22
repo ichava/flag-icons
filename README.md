@@ -23,6 +23,11 @@ Full documentation is at **[opensource.simtabi.com/documentation/ichava/icon-set
 
 ### This pack
 
+- [Installation](docs/installation.md) — requirements, the repositories block, seeding
+- [Getting started](docs/getting-started.md) — your first icon from this pack
+- [Configuration](docs/configuration.md) — this pack's config key, and what is core's instead
+- [Architecture](docs/architecture.md) — what it ships, what it delegates, and why
+- [Release](docs/release.md) — how a version is cut, and when the core floor moves
 - [Variants](docs/variants.md) — the `1x1` and `4x3` ratios, and the ISO 3166-1 codes files are named by
 - [Customisation](docs/customization.md) — sizing, why `currentColor` does nothing here, rounded and bordered flags
 - [Attribution](docs/attribution.md) — upstream project, licence terms, and where the vendored version is recorded
