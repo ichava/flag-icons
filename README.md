@@ -43,7 +43,7 @@ Its upstream is `lipis/flag-icons`; run core's [check pack updates](https://open
 
 ## Contributing & security
 
-See [CONTRIBUTING.md](CONTRIBUTING.md). Report vulnerabilities privately through [SECURITY.md](SECURITY.md) — never in a public issue.
+See [CONTRIBUTING.md](CONTRIBUTING.md). Report vulnerabilities privately through [security policy](https://github.com/ichava/icon-sets-flag/security/policy) — never in a public issue.
 
 ## License
 
