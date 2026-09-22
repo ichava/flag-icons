@@ -2,6 +2,39 @@
 
 All notable changes to `ichava/icon-sets-flag` follow [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Changed
+
+- **The markdown path filter now matches markdown at any depth.**
+  `code-quality.yml` and `tests.yml` carried `paths-ignore: '*.md'`. In GitHub's
+  filter syntax a single `*` does not cross a `/`, so that pattern matched a
+  root-level `README.md` and nothing else -- every edit under `docs/` ran the
+  full PHP suite and the static-analysis job, which is precisely what the filter
+  existed to skip. `'**.md'` matches at any depth.
+
+  Worth stating which direction this failed in, because it decides how urgent it
+  was: a broken `paths-ignore` runs **more** than it should, never less. The cost
+  was CI minutes on a free-plan allowance, not a gate that stopped firing.
+
+### Fixed
+
+- **`metadata.homepage` pointed at this package instead of the upstream
+  project.** It read `https://github.com/ichava/icon-sets-flag`, which is what
+  `metadata.repository` already holds -- so the two fields shipped an identical
+  link under different names, and the one fact neither of them recorded, where a
+  human goes to see the icon set itself, was missing. It now reads
+  `https://github.com/lipis/flag-icons`.
+
+  A test pins it, asserting both the exact upstream URL and the general rule
+  that the field never contains `github.com/ichava/`, so the guard survives an
+  upstream rename.
+
+  It drifted unnoticed because nothing renders it. `IconRegistry` reads it into
+  the pack descriptor and the browser API allows it through `publicMetadata()`,
+  but no frontend consumes it, so a wrong value is invisible until somebody
+  reads the JSON.
+
 ## [0.3.2] - 2026-09-21
 
 ### Fixed
